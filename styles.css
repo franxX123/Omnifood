@@ -1,0 +1,612 @@
+/* 
+    01: Typography
+
+    FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+    02: Colors
+    Main Color: #e67e22, #fff
+    Tints: #fdf2e9, #eea564
+    Shades: #e67e22, #cf711f, #e98b38
+    Greys: #444, #777, #555
+    Accent: 
+
+    Line height: 1,6, 1.05
+
+    03: Images - Already provided in the img folder
+    04: Icons 
+    05: Border Radius
+    9px
+    06: Box-shadow
+    07: Spacing/White Space
+    SPACING SYSTEM (px): 
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #555;
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+/******** GENERAL *******/
+.heading-primary {
+  /* 62 / 74 / 86 */
+  font-size: 5.2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+}
+
+.heading-secondary {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1200px;
+  font-size: 1.8rem;
+  padding: 4.8rem 3.2rem;
+  margin: 0 auto;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  column-gap: 3.2rem;
+  row-gap: 9.6rem;
+}
+
+.grid--column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.subheading {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  color: #eb984e;
+  text-transform: uppercase;
+}
+
+.link:link,
+.link:visited {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e98b38;
+  display: inline-block;
+  padding-bottom: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+
+  transition: color 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+.btn:link,
+.btn:visited {
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 9px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.btn--cta:link,
+.btn--cta:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--cta:hover,
+.btn--cta:active {
+  /* Normally we just change the background color */
+  background-color: #cf711f;
+}
+
+.btn--lm:link,
+.btn--lm:visited {
+  background-color: #fff;
+  color: #495057;
+}
+
+.btn--lm:hover,
+.btn--lm:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 1);
+}
+
+.margin-right-sm {
+  /* display: inline-block; */
+  margin-right: 1.6rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 2.4rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 6.4rem;
+}
+
+.margin-bottom-x-lg {
+  margin-bottom: 9.6rem;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+/******** HEADER *******/
+.header {
+  height: 9.6rem;
+  display: flex;
+  padding: 4.8rem 6.4rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+}
+
+.header-logo {
+  height: 3.2rem;
+}
+
+.main-navigation {
+}
+
+.navigation-sections {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  list-style-type: none;
+}
+
+.navigation-section:link,
+.navigation-section:visited {
+  text-decoration: none;
+  font-weight: 700;
+  color: #333;
+}
+
+.navigation-section.btn:link,
+.navigation-section.btn:visited {
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+}
+
+/******** HERO *******/
+.section-hero-box {
+  background-color: #fdf2e9;
+  padding: 4.8rem 3.2rem;
+}
+
+.section-hero {
+  /* background-color: red; */
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 62px;
+  height: 70vh;
+}
+
+.section-hero-text {
+  font-size: 2rem;
+}
+
+.section-hero-summary {
+  margin-bottom: 4.8rem;
+  line-height: 1.6;
+}
+.section-hero-img {
+  width: 100%;
+}
+
+.delivered-box {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+}
+.delivered-imgs {
+  display: flex;
+  align-items: center;
+}
+
+.delivered-imgs img {
+  width: 6.4rem;
+  /* IMPORTANT: Normally we don't specify the width, because the browser figures it out. But, since safari has a bug regarding this we need to explicitly a width */
+  height: 6.4rem;
+  border-radius: 50%;
+  border: 0.2rem solid #fdf2e9;
+  margin-right: -2.4rem;
+  /* IMPORTANT: Think of margin as a push and a pull:
+    -the margin pushes if the margin spacing is positive
+    -the margin pulls elements if the margin is negative 
+  */
+}
+
+.delivered-imgs img:last-child {
+  margin-right: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/******** HOW IT WORKS *********/
+
+.section-how {
+}
+
+.section-how-heading,
+.section-how-subheading {
+  text-align: center;
+}
+
+.section-how-steps {
+}
+
+.setion-how-step {
+  align-self: center;
+  justify-self: center;
+}
+
+.step-number {
+  font-size: 9.6rem;
+  font-weight: 700;
+  color: #ddd;
+}
+.step-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+}
+.step-description {
+  line-height: 1.6;
+}
+.section-how-img {
+  width: 42%;
+}
+
+.section-how-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section-how-img-box::before,
+.section-how-img-box::after {
+  content: "";
+  border-radius: 50%;
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.section-how-img-box::before {
+  width: 50%;
+  /* IMPORTANT: A trick for adding height using percentages when height % can't be applied*/
+  padding-bottom: 50%;
+  background-color: #f8d8bd;
+  z-index: -1;
+}
+
+.section-how-img-box::after {
+  width: 60%;
+  /* IMPORTANT: A trick for adding height using percentages when height % can't be applied*/
+  padding-bottom: 60%;
+  background-color: #fae5d3;
+  z-index: -2;
+}
+
+/*********FEATURED IN**********/
+.section-featured {
+  padding: 4.8rem 0;
+}
+
+.heading-featured {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  margin: 3.2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+}
+.logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logos img {
+  /* IMPORTANT: When scaling the size of an image down it is better to lessen the height to make the image look more natural */
+  height: 3.2rem;
+  /* IMPORTANT: We have the images obtain a similar color by changing the brightness */
+  filter: brightness(0%);
+  /* IMPORTANT: We can change the shade of the colors of the images by changing how visible they are using the opacity property */
+  opacity: 50%;
+}
+
+/******** MEALS *********/
+.section-meals {
+  padding: 4.8rem 3.2rem;
+}
+
+.section-meals-subheading {
+}
+
+.meals {
+  column-gap: 4.8rem;
+}
+
+.meal {
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+  overflow: hidden;
+
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  box-shadow: 0 2.4rem 2.8rem rgba(0, 0, 0, 0.08);
+  transform: translate(0, -1rem);
+}
+
+.meal-details {
+  padding: 3.6rem 4.8rem;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.tag {
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+}
+.tag--vegetarian {
+  background-color: #69db7c;
+}
+
+.tag--vegen {
+  background-color: #94d82d;
+}
+.tag--paleo {
+  background-color: #fcc419;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.list-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #cf711f;
+}
+
+.diets-heading {
+  font-size: 3.2rem;
+}
+
+.all-diets {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.diets {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.diet {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #cf711f;
+}
+
+/******** Testimonials *********/
+.section-testimonial {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 0.55fr 0.45fr;
+  align-items: center;
+}
+
+.testimonial-box {
+  padding: 9.8rem;
+}
+
+.testimonials {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3.6rem;
+  column-gap: 4.8rem;
+}
+.testimonial {
+}
+.testimonial-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  /* margin-bottom: 1.2rem; */
+}
+
+.testomonial-text {
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-author {
+  color: #6f6f6f;
+}
+
+.gallery {
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.gallery-img-box {
+  overflow: hidden;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  /* height: 100%; */
+  transition: all 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+/******** Price Section *********/
+.section-price {
+  padding: 14.4rem 9.6rem 9.6rem 9.6rem;
+}
+
+.header-price {
+  text-align: center;
+}
+
+.price-card {
+  width: 75%;
+  border-radius: 9px;
+}
+
+.price-starter {
+  justify-self: flex-end;
+  padding: 4.78rem;
+
+  border: 0.2rem solid #fdf2e9;
+}
+
+.price-complete {
+  justify-self: flex-start;
+  padding: 4.8rem;
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-subheading {
+  color: #e67e22;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.price-heading {
+  margin-bottom: 1.6rem;
+}
+
+.price-heading span {
+  font-size: 3.2rem;
+}
+
+.price-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.price-complete::before {
+  content: "Best Value";
+  font-size: 1.4rem;
+  color: #333;
+  text-transform: uppercase;
+  background-color: #fcc419;
+  font-weight: 700;
+  padding: 0.8rem 4.8rem;
+  transform: rotateZ(45deg);
+  position: absolute;
+  top: 28px;
+  right: -49px;
+}
